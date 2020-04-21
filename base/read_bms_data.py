@@ -246,13 +246,20 @@ def read_data():
                          dtype = np.float32, delimiter=',')
     test = np.loadtxt(os.path.join(os.path.abspath(csv_dir),'test[cplt].csv'),  # load 训练集标签
                          dtype = np.int32, delimiter=',')
-    
+
+    print('train shape {}'.format(train.shape))
+    print('test shape {}'.format(test.shape))
+
     train_X = np.array(train[:,:-1],dtype = np.float32)
     train_Y = np.array(train[:,-1].reshape(-1,1),dtype = np.float32)
     test_X = np.array(test,dtype = np.float32)
     
     train_X, test_X, _ = preprocess(train_X, test_X)
-    
+
+    print('train_X shape {}'.format(train_X.shape))
+    print('train_Y shape {}'.format(train_Y.shape))
+
+
     return [train_X, train_Y, test_X]
 
 
@@ -261,26 +268,29 @@ def submission(predict):
     df['Item_Outlet_Sales'] = predict
     if not os.path.exists(os.path.join(os.path.abspath(sub_dir))): os.makedirs(os.path.join(os.path.abspath(sub_dir)))
     df.to_csv(os.path.join(os.path.abspath(sub_dir),'sub01[bms].csv'), index=False)         # save 测试集标签
+    print('submission file:{}'.format(os.path.join(os.path.abspath(sub_dir),'sub01[bms].csv')))
 
 if __name__ == "__main__":
     
-    # 读取不完备数据集
-    train_X, train_Y, test_X = make_datasets()
-    print(np.isnan(train_X[3,9]))
-    print(np.isnan(train_X[7,8]))
-    
-    # 分割完备/不完备数据集
-    datasets = split_datasets(train_X, test_X)
-    
-    # 用完备数据集预测不完备数据集
-    train_x8, test_x8 = completion_by_prediction(0)
-    train_x9, test_x9 = completion_by_prediction(1)
-    
-    # 合并数据集
-    train_X,test_X = recon_X()
-    
-    # 保存数据集
-    np.savetxt(os.path.join(os.path.abspath(csv_dir),'train[cplt].csv'),np.concatenate((train_X,train_Y),axis = 1),
-               fmt='%.6f',delimiter=",")
-    np.savetxt(os.path.join(os.path.abspath(csv_dir),'test[cplt].csv'),test_X,
-               fmt='%.6f',delimiter=",")
+    # # 读取不完备数据集
+    # train_X, train_Y, test_X = make_datasets()
+    # print(np.isnan(train_X[3,9]))
+    # print(np.isnan(train_X[7,8]))
+    #
+    # # 分割完备/不完备数据集
+    # datasets = split_datasets(train_X, test_X)
+    #
+    # # 用完备数据集预测不完备数据集
+    # train_x8, test_x8 = completion_by_prediction(0)
+    # train_x9, test_x9 = completion_by_prediction(1)
+    #
+    # # 合并数据集
+    # train_X,test_X = recon_X()
+    #
+    # # 保存数据集
+    # np.savetxt(os.path.join(os.path.abspath(csv_dir),'train[cplt].csv'),np.concatenate((train_X,train_Y),axis = 1),
+    #            fmt='%.6f',delimiter=",")
+    # np.savetxt(os.path.join(os.path.abspath(csv_dir),'test[cplt].csv'),test_X,
+    #            fmt='%.6f',delimiter=",")
+
+    read_data()
