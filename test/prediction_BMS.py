@@ -10,10 +10,14 @@ sys.path.append("../models")
 sys.path.append("../base")
 filename = os.path.basename(__file__)
 
-from dbn import DBN
-from sup_sae import supervised_sAE
-from read_bms_data import preprocess,submission,read_data
-    
+# from dbn import DBN
+# from sup_sae import supervised_sAE
+# from read_bms_data import preprocess,submission,read_data
+
+from models.dbn import DBN
+from models.sup_sae import supervised_sAE
+from base.read_bms_data import preprocess,submission,read_data
+
 train_X,train_Y,test_X = read_data() 
 
 train_X = train_X[:,:8]
