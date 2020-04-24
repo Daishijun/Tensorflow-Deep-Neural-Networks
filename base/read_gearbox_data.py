@@ -13,9 +13,10 @@ sys.path.append("../base")
 filename = os.path.basename(__file__)
 import numpy as np
 import pandas as pd
-import keras
+# import keras
 from sklearn.preprocessing import LabelEncoder,MinMaxScaler,StandardScaler
-import tensorflow as tf
+
+
 
 
 ###########################
@@ -85,11 +86,16 @@ def read_data():
 
 
 def submission(predict):
-    df = pd.read_csv(os.path.join(os.path.abspath(csv_dir), 'Submission_gearbox.csv'))
-    df['Item_Outlet_Sales'] = predict
+    df = pd.read_csv(os.path.join(os.path.abspath(csv_dir), 'test_20004015-2016-10.csv'))
+
+    print('predict type : {}'.format(type(predict)))
+    print('predict shape :{}'.format(predict.shape))
+    print('origin df shape : {}'.format(df.shape))
+
+    df.iloc[:,:-2] = predict
     if not os.path.exists(os.path.join(os.path.abspath(sub_dir))): os.makedirs(os.path.join(os.path.abspath(sub_dir)))
-    df.to_csv(os.path.join(os.path.abspath(sub_dir), 'sub01[bms].csv'), index=False)  # save 测试集标签
-    print('submission file:{}'.format(os.path.join(os.path.abspath(sub_dir), 'sub01[bms].csv')))
+    df.to_csv(os.path.join(os.path.abspath(sub_dir), 'sub01[gear].csv'), index=False)  # save 测试集标签
+    print('submission file:{}'.format(os.path.join(os.path.abspath(sub_dir), 'sub01[gear].csv')))
 
 
 if __name__ == "__main__":

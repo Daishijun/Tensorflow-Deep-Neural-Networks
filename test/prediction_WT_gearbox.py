@@ -8,8 +8,9 @@
 
 '''用于齿轮箱的DBN'''
 
-import tensorflow as tf
 
+import tensorflow.compat.v1 as tf
+tf.disable_v2_behavior()
 import numpy as np
 np.random.seed(0)
 
@@ -19,13 +20,18 @@ sys.path.append("../models")
 sys.path.append("../base")
 filename = os.path.basename(__file__)
 
-# from dbn import DBN
-# from sup_sae import supervised_sAE
-# from read_bms_data import preprocess,submission,read_data
+os.environ["CUDA_VISIBLE_DEVICES"] = "2"
+config = tf.ConfigProto()
+config.gpu_options.allow_growth = True
+tf.Session(config=config)
 
-from models.dbn import DBN
-from models.sup_sae import supervised_sAE
-from base.read_gearbox_data import preprocess,submission,read_data
+from dbn import DBN
+from sup_sae import supervised_sAE
+from read_gearbox_data import preprocess,submission,read_data
+
+# from models.dbn import DBN
+# from models.sup_sae import supervised_sAE
+# from base.read_gearbox_data import preprocess,submission,read_data
 
 [train_X,train_Y,test_X], prep = read_data()
 
@@ -46,16 +52,20 @@ def build_(method=1,beta=None):
                      hidden_act_func=['tanh','gauss'],
                      output_act_func='affine',
                      loss_func='mse', # gauss 激活函数会自动转换为 mse 损失函数
-                     struct=[x_dim, x_dim*40, x_dim*20, x_dim*10, x_dim*2, y_dim],
+                     struct=[x_dim, x_dim*10, x_dim*5, x_dim*5, x_dim*10, y_dim],
                      lr=1e-4,
                      use_for='prediction',
                      bp_algorithm='rmsp',
                      epochs=240,
+                     # epochs=24,
+                     # epochs=2,
                      batch_size=32,
                      dropout=0.08,
                      units_type=['gauss','gauss'],
                      rbm_lr=1e-4,
                      rbm_epochs=60,
+                     # rbm_epochs=6,
+                     # rbm_epochs=3,
                      cd_k=1,
                      pre_train=True)
     elif method==2:
@@ -88,6 +98,7 @@ classifier.train_model(train_X = train_X,
 test_Y = sess.run(classifier.pred,feed_dict={
         classifier.input_data: test_X,
         classifier.keep_prob: 1.0})
-test_Y = prep.inverse_transform(test_Y.reshape(-1,1))
+# test_Y = prep.inverse_transform(test_Y.reshape(-1,1))
+test_Y = prep.inverse_transform(test_Y)
 exp_time=classifier.pre_exp_time
 submission(test_Y)
