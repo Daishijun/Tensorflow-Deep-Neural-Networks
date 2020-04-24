@@ -1,26 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="04a76988-b3b8-4981-baf7-ed5dd382fe00" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/afterDBN/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/afterDBN/calculateDistance.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/afterDBN/calupper.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Tensorflow-Deep-Neural-Networks.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Tensorflow-Deep-Neural-Networks.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base/base_func.py" beforeDir="false" afterPath="$PROJECT_DIR$/base/base_func.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base/read_gearbox_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/base/read_gearbox_data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/ae.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/ae.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/cnn.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/cnn.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/dbn.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/dbn.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/lstm.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/lstm.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/rbm.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/rbm.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/rnn.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/rnn.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/sup_sae.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/sup_sae.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/prediction_WT_gearbox.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/prediction_WT_gearbox.py" afterDir="false" />
-    </list>
+    <list default="true" id="04a76988-b3b8-4981-baf7-ed5dd382fe00" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +54,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/base/read_bms_data.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2030">
+            <state relative-caret-position="7076">
               <caret line="244" column="59" selection-start-line="244" selection-start-column="52" selection-end-line="244" selection-end-column="59" />
               <folding>
                 <element signature="e#92#101#0" expanded="true" />
@@ -85,7 +66,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/prediction_WT_gearbox.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
+            <state relative-caret-position="638">
               <caret line="22" column="40" lean-forward="true" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="40" />
             </state>
           </provider>
@@ -94,7 +75,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/afterDBN/calculateDistance.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
+            <state relative-caret-position="957">
               <caret line="33" column="124" selection-start-line="33" selection-start-column="124" selection-end-line="33" selection-end-column="124" />
               <folding>
                 <element signature="e#207#225#0" expanded="true" />
@@ -118,7 +99,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/base/read_gearbox_data.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-126">
+            <state relative-caret-position="2552">
               <caret line="88" column="38" lean-forward="true" selection-start-line="88" selection-start-column="38" selection-end-line="88" selection-end-column="38" />
               <folding>
                 <element signature="e#173#182#0" expanded="true" />
@@ -176,17 +157,18 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-270" />
-    <option name="y" value="85" />
-    <option name="width" value="3865" />
-    <option name="height" value="2075" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="330" />
+    <option name="y" value="105" />
+    <option name="width" value="3655" />
+    <option name="height" value="2060" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -235,7 +217,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -368,6 +349,7 @@
       <updated>1587458439773</updated>
       <workItem from="1587458447952" duration="20030000" />
       <workItem from="1587618166400" duration="8451000" />
+      <workItem from="1587737660638" duration="14000" />
     </task>
     <task id="LOCAL-00001" summary="for wind turbine gearbox">
       <created>1587475324901</created>
@@ -394,13 +376,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28481000" />
+    <option name="totallyTimeSpent" value="28495000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="-6" width="1549" height="837" extended-state="6" />
+    <frame x="-6" y="-6" width="1549" height="837" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23844609" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24179505" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -546,27 +528,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/un_sae.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="6" column="26" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/base/read_bms_data.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2030">
-          <caret line="244" column="59" selection-start-line="244" selection-start-column="52" selection-end-line="244" selection-end-column="59" />
-          <folding>
-            <element signature="e#92#101#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/models/sup_sae.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="87">
           <caret line="3" column="18" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/un_sae.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="6" column="26" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -577,29 +549,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/base/read_gearbox_data.py">
+    <entry file="file://$PROJECT_DIR$/base/read_bms_data.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-126">
-          <caret line="88" column="38" lean-forward="true" selection-start-line="88" selection-start-column="38" selection-end-line="88" selection-end-column="38" />
+        <state relative-caret-position="7076">
+          <caret line="244" column="59" selection-start-line="244" selection-start-column="52" selection-end-line="244" selection-end-column="59" />
           <folding>
-            <element signature="e#173#182#0" expanded="true" />
+            <element signature="e#92#101#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/prediction_WT_gearbox.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
+        <state relative-caret-position="638">
           <caret line="22" column="40" lean-forward="true" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="40" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/afterDBN/calculateDistance.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
+        <state relative-caret-position="957">
           <caret line="33" column="124" selection-start-line="33" selection-start-column="124" selection-end-line="33" selection-end-column="124" />
           <folding>
             <element signature="e#207#225#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/base/read_gearbox_data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2552">
+          <caret line="88" column="38" lean-forward="true" selection-start-line="88" selection-start-column="38" selection-end-line="88" selection-end-column="38" />
+          <folding>
+            <element signature="e#173#182#0" expanded="true" />
           </folding>
         </state>
       </provider>
